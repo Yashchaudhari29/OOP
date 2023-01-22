@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+class complex
+{
+
+    int a;
+    int b;
+
+public:
+    void setdata(int v1, int v2)
+    {
+        a = v1;
+        b = v2;
+    }
+
+    void setdatabysum(complex o1, complex o2)
+    {
+        a = o1.a + o2.a;
+        b = o1.b + o2.b;
+    }
+
+    void displaynumber()
+    {
+
+        cout << "the complex number is " << a << " + (" << b << "i)" << endl;
+    }
+
+
+    void displaysum()
+    {
+
+        cout << "the sum of complex number is " << a << " + (" << b << "i)" << endl;
+    }
+};
+
+int main(){
+
+int n1,n2,n3,n4;
+cout<<"enter the value of a i.e. real part of complex number and b i.e. imaginary part of complex number for first complex number"<<endl;
+cin>>n1>>n2;
+
+cout<<"enter the value of a i.e. real part of complex number and b i.e. imaginary part of complex number for second complex number"<<endl;
+cin>>n3>>n4;
+
+
+    complex c1,c2,c3;
+    c1.setdata(n1,n2);
+    c1.displaynumber();
+    c2.setdata(n3,n4);
+    c2.displaynumber();
+    c3.setdatabysum(c1,c2);
+    c3.displaysum();
+}
